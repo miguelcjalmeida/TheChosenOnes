@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TheChosenOnes.Pack/TheChosenOnes.Pack.csproj" />
+  <Project Path="TheChosenOnes/TheChosenOnes.csproj" />
+</Solution>
