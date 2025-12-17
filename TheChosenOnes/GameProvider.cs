@@ -1,4 +1,5 @@
-﻿using BepInEx.Configuration;
+﻿using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 
 namespace TheChosenOnes
@@ -7,5 +8,6 @@ namespace TheChosenOnes
     {
         public static ManualLogSource Log { get; set; } = null;
         public static GameConfig Config { get; set; } = null;
+        public static BaseUnityPlugin Plugin { get; set; } = null;
     }
 }

@@ -37,7 +37,8 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Across the Obelisk\AcrossTheObelisk_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx">
+    <Reference Include="BepInEx, Version=5.4.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\AppData\Roaming\r2modmanPlus-local\AcrossTheObelisk\profiles\Scotilen\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="com.stiffmeds.obeliskialessentials">

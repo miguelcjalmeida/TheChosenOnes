@@ -1,8 +1,4 @@
-﻿using BepInEx;
-using HarmonyLib;
-using UnityEngine;
-
-namespace TheChosenOnes
+﻿namespace TheChosenOnes
 {
     public class HaveInitialEquipmentsGivenUseCase : IUseCase
     {
@@ -13,6 +9,7 @@ namespace TheChosenOnes
             if (!GameProvider.Config.IsModEnabled) return;
             if (MapManager.Instance == null) return;
             if (AtOManager.Instance == null) return;
+            if (GameManager.Instance == null) return;
             if (AtOManager.Instance.currentMapNode != "sen_0")
             {
                 GameProvider.Log.LogInfo("reset initial equips for next gameplay");
@@ -23,10 +20,20 @@ namespace TheChosenOnes
             if (equipsWereGiven) return;
             equipsWereGiven = true;
 
-            GameProvider.Log.LogInfo($"current node = {AtOManager.Instance.currentMapNode}");
-            GameProvider.Log.LogInfo($"initial loot list = {GameProvider.Config.InitialLootId}");
-            GameProvider.Log.LogInfo("offering initial loot");
+            ProvideDisclaimerForMultiplayer();
+            AtOManager.Instance.SetObeliskLootReroll();
             AtOManager.Instance.DoLoot(GameProvider.Config.InitialLootId);
+            GameProvider.Log.LogInfo("Opened loot rewards!");
+        }
+
+        private void ProvideDisclaimerForMultiplayer()
+        {
+            if (!GameManager.Instance.IsMultiplayer()) return;
+
+            var lootCount = Globals.Instance.CardListByClass[Enums.CardClass.Item].Count;
+            GameProvider.Log.LogWarning("For multiplayer games, you and other players must have same checksum.");
+            GameProvider.Log.LogWarning("This mod only requires you and the others to have the same loots");
+            GameProvider.Log.LogWarning($"You have {lootCount} loots available. Check with your friends whether they have the same quantity");
         }
     }
 }

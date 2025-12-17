@@ -1,12 +1,12 @@
 {
-    "name": "The Chosen Ones",
+    "name": "TheChosenOnes",
     "author": "Scotilen",
-    "version_number": "1.0.0",
+    "version_number": "1.0.1",
     "website_url": "https://github.com/miguelcjalmeida/TheChosenOnes",
     "description": "Have your heroes starting the game with an unique equipment to show how legendary they are.",
     "dependencies": [
-        "BepInEx-BepInExPack_AcrossTheObelisk-5.4.21",
+        "BepInEx-BepInExPack_AcrossTheObelisk-5.4.23",
         "meds-Obeliskial_Essentials-1.6.0",
-        "Obeliskial-Obeliskial_Content-1.4.0"
+        "meds-Obeliskial_Content-1.7.0"
     ]
 }

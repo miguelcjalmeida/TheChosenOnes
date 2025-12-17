@@ -18,7 +18,7 @@ namespace TheChosenOnes.Pack
 
             if (!Directory.Exists(modsDir))
             {
-                Console.WriteLine("Mods directory not found.");
+                Console.WriteLine("- Mods directory not found.");
                 return;
             }
 
@@ -34,7 +34,7 @@ namespace TheChosenOnes.Pack
 
                 if (!ValidateMod(modPath))
                 {
-                    Console.WriteLine($"❌ Skipped {modName} (invalid structure)");
+                    Console.WriteLine($"- Skipped {modName} (invalid structure)");
                     continue;
                 }
 
@@ -45,7 +45,7 @@ namespace TheChosenOnes.Pack
 
                 ZipDirectoryContents(modPath, zipPath);
 
-                Console.WriteLine($"Created {zipPath}");
+                Console.WriteLine($"- Created {zipPath}");
             }
 
         }
@@ -77,7 +77,7 @@ namespace TheChosenOnes.Pack
             {
                 string dest = Path.Combine(pluginsDir, dllName);
                 File.Copy(dll, dest, overwrite: true);
-                Console.WriteLine($" - Copied {dllName}");
+                Console.WriteLine($"- Copied {dllName}");
             }
         }
 

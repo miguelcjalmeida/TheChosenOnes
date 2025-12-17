@@ -1,96 +1,80 @@
-﻿# The Chosen Ones
+# The Chosen Ones
 
-**The Chosen Ones** is a quality-of-life / fun mod for **Across the Obelisk** that grants the player an immediate boost at the very start of a run.
+**The Chosen Ones** is a content mod for **Across the Obelisk** that grants players access to a powerful, custom loot selection at the very start of a run.
 
-As soon as a new game begins — on the **very first node of Act 0** — the mod automatically opens a **Legendary Equipment selection panel**, allowing you to choose powerful items before the adventure truly starts.
-
-This is ideal for:
-
-* Faster testing and debugging
-* Experimental or overpowered runs
-* Players who enjoy starting as true “chosen ones”
+This mod is designed for experimentation, fast runs, and players who want to begin their journey already feeling legendary.
 
 ---
 
-## ✨ Features
+## Features
 
-* 📦 Automatically opens a **Legendary Equipment reward** at the start of the run
-* ⚔️ Uses the game’s **native loot / reward UI**
-* 🧭 Triggers on the **first node of Act 0**, not tied to towns or events
-* 🛠️ No configuration required — just install and play
-
----
-
-## 🚀 How It Works
-
-When a new run starts, the mod listens for the initialization of the first node (Act 0).
-Once detected, it immediately triggers a **Legendary loot reward panel**, allowing you to pick your equipment before proceeding.
-
-The loot is pulled directly from the game’s internal loot tables, ensuring compatibility with the base game and other mods.
+* Opens a custom loot selection at the **very first node (Act 0)**
+* Provides a curated list of **Epic and Mythic equipment**
+* Uses the **Obeliskial Content system** (no runtime injection hacks)
+* Fully compatible with **r2modman** and **Thunderstore**
+* Lightweight and safe to add or remove
 
 ---
 
-## 📦 Installation
+## How It Works
+
+When a new run starts, the mod triggers a custom loot event that allows the player to pick from a predefined pool of high-tier equipment.
+
+The loot is defined using Obeliskial JSON content files and loaded through the official content pipeline.
+
+---
+
+## Requirements
+
+This mod requires the following dependencies:
+
+* BepInEx 5
+* Obeliskial Essentials
+* Obeliskial Content
+
+Make sure all dependencies are installed before launching the game.
+
+---
+
+## Installation
 
 ### Using r2modman (Recommended)
 
-1. Install **r2modman**
-2. Search for **The Chosen Ones**
-3. Click **Download**
-4. Launch the game via r2modman
-
-### Manual Installation
-
-1. Download the mod `.zip`
-2. Extract it into:
-
-   ```
-   BepInEx/plugins/
-   ```
-3. Launch the game
+1. Open r2modman
+2. Select **Across the Obelisk**
+3. Search for **The Chosen Ones**
+4. Install the mod
+5. Launch the game
 
 ---
 
-## ⚠️ Compatibility
+## Compatibility
 
-* ✔ Compatible with the base game
-* ✔ Safe to add or remove (affects only new runs)
-* ❗ Not recommended for balanced or competitive play
-
----
-
-## 🛠️ Intended Use
-
-This mod was primarily created for:
-
-* Having fun and experimenting with new possible builds!
-
-Balance is **not** a goal — power is 😉
+* Works with single-player and multiplayer
+* Safe to use with most content and balance mods
+* Does not modify save files
 
 ---
 
-## 🧾 Changelog
+## Intended Use
 
-### v1.0.0
+This mod is ideal for:
 
-* Initial release
-* Legendary equipment selection at game start
-
----
-
-## ❤️ Credits
-
-* Developed by **TheChosenOnes**
-* Powered by **BepInEx**
-* Thanks to the Across the Obelisk modding community
+* Testing builds quickly
+* Debugging other mods
+* Power fantasy runs
+* Experienced players who want faster progression
 
 ---
 
-## 📣 Feedback & Issues
+## Author
 
-If you encounter issues or have suggestions:
+Created by **Scotilen**
 
-* Leave a comment on the Thunderstore page
-* Open an issue on the repository (if available)
+---
 
-Have fun — and may your heroes be truly chosen.
+## Feedback and Issues
+
+If you encounter bugs or have suggestions, please report them on the mod page or repository.
+
+Enjoy your run, and may you truly be one of **The Chosen Ones**.

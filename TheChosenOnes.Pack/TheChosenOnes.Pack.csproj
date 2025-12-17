@@ -45,18 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mod\TheChosenOnes\BepInEx\config\Obeliskial_importing\The Chosen Ones\loot\thechosenshop.json">
+    <None Include="Mod\TheChosenOnes\BepInEx\config\Obeliskial_importing\TheChosenOnes\loot\thechosenshop.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Mod\TheChosenOnes\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Mod\TheChosenOnes\manifest.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Mod\TheChosenOnes\README.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

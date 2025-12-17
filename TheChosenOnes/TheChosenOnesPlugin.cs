@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TheChosenOnes
 {
-    [BepInPlugin("scotilen.thechosenones", "The Chosen Ones", "1.0.0")]
+    [BepInPlugin("scotilen.thechosenones", "TheChosenOnes", "1.0.1")]
     public class TheChosenOnesPlugin : BaseUnityPlugin
     {
         private static bool legendaryGiven = false;
@@ -14,10 +14,11 @@ namespace TheChosenOnes
 
         private void Awake()
         {
+            GameProvider.Plugin = this;
             GameProvider.Config = new GameConfig(Config);
             GameProvider.Log = Logger;
-            Logger.LogInfo("The Chosen Ones loaded");
-            Essentials.RegisterMod("The Chosen Ones", "Scotilen", "The Chosen Ones", "1.0.0", 20251216, "https://github.com/miguelcjalmeida/TheChosenOnes", null, "The Chosen Ones", 100, null, "", true);
+            Logger.LogInfo("TheChosenOnes loaded");
+            Essentials.RegisterMod("TheChosenOnes", "Scotilen", "TheChosenOnes", "1.0.1", 20251216, "https://github.com/miguelcjalmeida/TheChosenOnes", null, "TheChosenOnes", 100, null, "", true);
             new Harmony("scotilen.thechosenones").PatchAll();
         }
     }
