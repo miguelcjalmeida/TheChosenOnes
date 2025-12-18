@@ -1,8 +1,14 @@
 # The Chosen Ones v1.0.9
 
-**The Chosen Ones** is a content mod for **Across the Obelisk** that grants players access to a powerful, custom loot selection at the very start of a run.
+**Would you like to begin your adventure as one of the chosen by the destiny?**
 
-This mod is designed for experimentation, fast runs, and players who want to begin their journey already feeling legendary.
+The Chosen Ones reshapes the opening moments of your journey by granting access to a powerful pool of legendary equipment right at the start of the run. Instead of waiting for chance or progression, players are invited to select from a curated selection of high-tier gear and shape their strategy from the very first step.
+
+The true strength of this mod lies not in raw power, but in freedom. By unlocking legendary options early, players can experiment with unconventional builds, explore new synergies, and fully realize character concepts that might otherwise take an entire run to assemble.
+
+Whether you are testing ideas, refining strategies, or simply embracing a power-fantasy start, The Chosen Ones empowers you to play the way you imagine — from the very beginning. 
+
+This **Across the Obelisk** mod is designed for experimentation and players who want to begin their journey already feeling legendary.
 
 ---
 
@@ -10,7 +16,6 @@ This mod is designed for experimentation, fast runs, and players who want to beg
 
 * Opens a custom loot selection at the **very first node (Act 0)**
 * Provides a curated list of **Epic and Mythic equipment**
-* Uses the **Obeliskial Content system** (no runtime injection hacks)
 * Fully compatible with **r2modman** and **Thunderstore**
 * Lightweight and safe to add or remove
 
@@ -68,18 +73,12 @@ This mod is ideal for:
 
 ---
 
-## Author
-
-Created by **Scotilen**
-
----
-
 ## Feedback and Issues
 
-If you encounter bugs or have suggestions, please report them on the mod page or repository.
+If you encounter bugs or have suggestions, please report them on the official Across the Obelisk discord server.
 
 Enjoy your run, and may you truly be one of **The Chosen Ones**.
 
 ## Credits
-- A big thanks to Ameuzito for helping me out with testing of the multiplayer!
+- A big thanks to Ameu for helping me out with the testing of the multiplayer, and suggesting so many ideas!
 - Thanks VidereJP for playing it with us
