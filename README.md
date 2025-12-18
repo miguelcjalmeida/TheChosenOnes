@@ -46,7 +46,7 @@ Make sure all dependencies are installed before launching the game.
 4. Install the mod
 5. Launch the game
 
-!(Install Here)[https://thunderstore.io/c/across-the-obelisk/p/ScotilenTeam/TheChosenOnes/]
+![Install Here](https://thunderstore.io/c/across-the-obelisk/p/ScotilenTeam/TheChosenOnes/)
 
 ---
 
