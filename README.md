@@ -1,4 +1,4 @@
-# The Chosen Ones v1.0.8
+# The Chosen Ones v1.0.9
 
 **The Chosen Ones** is a content mod for **Across the Obelisk** that grants players access to a powerful, custom loot selection at the very start of a run.
 
