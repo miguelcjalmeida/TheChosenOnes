@@ -1,4 +1,4 @@
-# The Chosen Ones
+# The Chosen Ones v1.0.8
 
 **The Chosen Ones** is a content mod for **Across the Obelisk** that grants players access to a powerful, custom loot selection at the very start of a run.
 
@@ -51,7 +51,7 @@ Make sure all dependencies are installed before launching the game.
 ## Compatibility
 
 * Works with single-player and multiplayer
-* Safe to use with most content and balance mods
+* Safe to use with most content and balance mods. Just make sure you have the same checksum!
 * Does not modify save files
 
 ---
@@ -61,7 +61,6 @@ Make sure all dependencies are installed before launching the game.
 This mod is ideal for:
 
 * Testing builds quickly
-* Debugging other mods
 * Power fantasy runs
 * Experienced players who want faster progression
 
@@ -78,3 +77,7 @@ Created by **Scotilen**
 If you encounter bugs or have suggestions, please report them on the mod page or repository.
 
 Enjoy your run, and may you truly be one of **The Chosen Ones**.
+
+## Credits
+- A big thanks to Ameuzito for helping me out with testing of the multiplayer!
+- Thanks VidereJP for playing it with us

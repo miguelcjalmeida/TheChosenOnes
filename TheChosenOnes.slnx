@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
   <Project Path="TheChosenOnes.Pack/TheChosenOnes.Pack.csproj" Id="02bcf672-a6a2-4cdb-bcad-5647d1c0ac90" />
   <Project Path="TheChosenOnes/TheChosenOnes.csproj" Id="ed3050ba-b23a-4aa5-a306-bd1a8508543d" />
 </Solution>

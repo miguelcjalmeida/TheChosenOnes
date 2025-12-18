@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
@@ -45,20 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mod\TheChosenOnes\BepInEx\config\Obeliskial_importing\TheChosenOnes\loot\thechosenshop.json">
+    <Compile Include="Pipes\CopyDllPipe.cs" />
+    <Compile Include="Pipes\PublishedResourcesValidationPipe.cs" />
+    <Compile Include="Pipes\PublishManifestPipe.cs" />
+    <Compile Include="Pipes\IPipe.cs" />
+    <Compile Include="Pipes\PipeContext.cs" />
+    <Compile Include="Manifest.cs" />
+    <None Include="Resources\TheChosenOnes\BepInEx\config\Obeliskial_importing\TheChosenOnes\loot\thechosenshop.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="Pipes\PublishReadmePipe.cs" />
+    <Compile Include="Pipes\VersionReadmePipe.cs" />
+    <Compile Include="Pipes\ZipPublishedResourcesPipe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Mod\TheChosenOnes\README.md">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Mod\TheChosenOnes\manifest.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TheChosenOnes\TheChosenOnes.csproj">
@@ -68,7 +75,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Mod\TheChosenOnes\icon.png">
+    <Content Include="Resources\TheChosenOnes\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

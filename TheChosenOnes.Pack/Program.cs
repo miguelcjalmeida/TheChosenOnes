@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.Compression;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TheChosenOnes.Pack.Pipes;
 
 namespace TheChosenOnes.Pack
 {
-    internal class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
             var baseDir = AppContext.BaseDirectory;
-            var modsDir = Path.Combine(baseDir, "Mod");
+            var modsDir = Path.Combine(baseDir, "Resources");
             var distDir = Path.Combine(baseDir, "Dist");
+
+            var pipes = new List<IPipe>();
+            pipes.Add(new PublishManifestPipe());
+            pipes.Add(new VersionReadmePipe());
+            pipes.Add(new PublishReadmePipe());
+            pipes.Add(new CopyDllPipe());
+            pipes.Add(new PublishedResourcesValidationPipe());
+            pipes.Add(new ZipPublishedResourcesPipe());
 
             if (!Directory.Exists(modsDir))
             {
@@ -24,88 +29,32 @@ namespace TheChosenOnes.Pack
 
             Directory.CreateDirectory(distDir);
 
-
-            foreach (string modPath in Directory.GetDirectories(modsDir))
+            try
             {
-                string modName = Path.GetFileName(modPath);
-                string zipPath = Path.Combine(distDir, $"{modName}.zip");
-
-                Console.WriteLine($"Packing {modName}...");
-
-                if (!ValidateMod(modPath))
-                {
-                    Console.WriteLine($"- Skipped {modName} (invalid structure)");
-                    continue;
-                }
-
-                CopyTheModDLL(modPath);
-
-                if (File.Exists(zipPath))
-                    File.Delete(zipPath);
-
-                ZipDirectoryContents(modPath, zipPath);
-
-                Console.WriteLine($"- Created {zipPath}");
+                ProcessResources(baseDir, modsDir, distDir, pipes);
             }
-
-        }
-
-        private static bool ValidateMod(string modPath)
-        {
-            bool hasManifest = File.Exists(Path.Combine(modPath, "manifest.json"));
-            bool hasReadme = File.Exists(Path.Combine(modPath, "README.md"));
-            bool hasIcon = File.Exists(Path.Combine(modPath, "icon.png"));
-
-            return hasManifest && hasReadme && hasIcon;
-        }
-
-        private static void CopyTheModDLL(string modPath)
-        {
-            string buildDir = Path.Combine(modPath, "../..");
-            string pluginsDir = Path.Combine(modPath, "BepInEx/plugins");
-            string dllName = Path.GetFileName(modPath) + ".dll";
-            string dllPath = $"{buildDir}/{dllName}";
-
-            if (!File.Exists(dllPath))
-                throw new Exception($"Missing build folder in mod: {dllPath}");
-
-            Directory.CreateDirectory(pluginsDir);
-
-            var dlls = Directory.GetFiles(buildDir, dllName);
-
-            foreach (var dll in dlls)
+            catch (Exception ex)
             {
-                string dest = Path.Combine(pluginsDir, dllName);
-                File.Copy(dll, dest, overwrite: true);
-                Console.WriteLine($"- Copied {dllName}");
+                Console.WriteLine($"- FAILED DUE TO: {ex.Message}");
             }
         }
 
-        private static void ZipDirectoryContents(string sourceDir, string zipPath)
+        private static void ProcessResources(string baseDir, string publishAllResourcesPath, string distDir, List<IPipe> pipes)
         {
-            using (var zip = ZipFile.Open(zipPath, ZipArchiveMode.Create))
+            foreach (string publishResourcesPath in Directory.GetDirectories(publishAllResourcesPath))
             {
-                foreach (string file in Directory.GetFiles(sourceDir, "*", SearchOption.AllDirectories))
+                var publishResourceName = Path.GetFileName(publishResourcesPath);
+                var publishFinalZipPath = Path.Combine(distDir, $"{publishResourceName}.zip");
+                var context = new PipeContext(publishResourceName, publishFinalZipPath, baseDir, publishAllResourcesPath, distDir, publishResourcesPath);
+
+                Console.WriteLine($"Packing {publishResourceName}...");
+
+                foreach (IPipe pipe in pipes)
                 {
-                    string entryName = GetRelativePath(sourceDir, file);
-                    zip.CreateEntryFromFile(file, entryName, CompressionLevel.Optimal);
+                    Console.WriteLine($"- Applying {pipe.GetType().Name}");
+                    pipe.Apply(context);
                 }
             }
-        }
-
-        private static string GetRelativePath(string baseDir, string fullPath)
-        {
-            if (!baseDir.EndsWith(Path.DirectorySeparatorChar.ToString()))
-                baseDir += Path.DirectorySeparatorChar;
-
-            Uri baseUri = new Uri(baseDir);
-            Uri fileUri = new Uri(fullPath);
-
-            return Uri.UnescapeDataString(
-                baseUri.MakeRelativeUri(fileUri)
-                       .ToString()
-                       .Replace('/', Path.DirectorySeparatorChar)
-            );
         }
     }
 }

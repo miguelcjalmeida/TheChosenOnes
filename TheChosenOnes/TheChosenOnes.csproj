@@ -44,6 +44,10 @@
     <Reference Include="com.stiffmeds.obeliskialessentials">
       <HintPath>..\..\..\..\AppData\Roaming\r2modmanPlus-local\AcrossTheObelisk\profiles\Scotilen\BepInEx\plugins\meds-Obeliskial_Essentials\com.stiffmeds.obeliskialessentials.dll</HintPath>
     </Reference>
+    <Reference Include="PhotonUnityNetworking, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Across the Obelisk\AcrossTheObelisk_Data\Managed\PhotonUnityNetworking.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +74,7 @@
     <Compile Include="GameProvider.cs" />
     <Compile Include="TheChosenOnesPlugin.cs" />
     <Compile Include="MapManagerStartPatch.cs" />
+    <Compile Include="Versioning.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
