@@ -1,4 +1,7 @@
-# The Chosen Ones v1.0.10
+
+![The chosen ones banner](./Assets/banner.png)
+
+# v1.0.10
 
 **Would you like to begin your adventure as one of the chosen by the destiny?**
 
@@ -10,8 +13,6 @@ Whether you are testing ideas, refining strategies, or simply embracing a power-
 
 This **Across the Obelisk** mod is designed for experimentation and players who want to begin their journey already feeling legendary.
 
----
-
 ## Features
 
 * Opens a custom loot selection at the **very first node (Act 0)**
@@ -21,15 +22,12 @@ This **Across the Obelisk** mod is designed for experimentation and players who 
 
 ![A preview of the mod in action](./Assets/loot-preview.png)
 
----
-
 ## How It Works
 
 When a new run starts, the mod triggers a custom loot event that allows the player to pick from a predefined pool of high-tier equipment.
 
 The loot is defined using Obeliskial JSON content files and loaded through the official content pipeline.
 
----
 
 ## Requirements
 
@@ -40,8 +38,6 @@ This mod requires the following dependencies:
 * Obeliskial Content
 
 Make sure all dependencies are installed before launching the game.
-
----
 
 ## Installation
 
@@ -55,15 +51,11 @@ Make sure all dependencies are installed before launching the game.
 
 [Install Here](https://thunderstore.io/c/across-the-obelisk/p/ScotilenTeam/TheChosenOnes/)
 
----
-
 ## Compatibility
 
 * Works with single-player and multiplayer
 * Safe to use with most content and balance mods. Just make sure you have the same checksum!
 * Does not modify save files
-
----
 
 ## Intended Use
 
@@ -72,8 +64,6 @@ This mod is ideal for:
 * Testing builds quickly
 * Power fantasy runs
 * Experienced players who want faster progression
-
----
 
 ## Feedback and Issues
 

@@ -4,6 +4,7 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/Solution Items/Assets/">
+    <File Path="Assets/banner.png" />
     <File Path="Assets/loot-preview.png" />
   </Folder>
   <Project Path="TheChosenOnes.Pack/TheChosenOnes.Pack.csproj" Id="02bcf672-a6a2-4cdb-bcad-5647d1c0ac90" />
