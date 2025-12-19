@@ -15,6 +15,7 @@ namespace TheChosenOnes
         public static void Postfix()
         {
             useCase.DoIt();
-        }
+			PerkTree.Instance.buttonConfirm.gameObject.SetActive(true);
+		}
     }
 }

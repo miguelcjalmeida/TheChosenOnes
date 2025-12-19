@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnablePerksInAnyCityUseCase.cs" />
     <Compile Include="GameConfig.cs" />
     <Compile Include="HaveInitialEquipmentsGivenUseCase.cs" />
     <Compile Include="IUseCase.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="GameProvider.cs" />
     <Compile Include="TheChosenOnesPlugin.cs" />
     <Compile Include="MapManagerStartPatch.cs" />
+    <Compile Include="TreePerkShowPatch.cs" />
     <Compile Include="Versioning.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
