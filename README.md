@@ -1,4 +1,4 @@
-# The Chosen Ones v1.0.9
+# The Chosen Ones v1.0.10
 
 **Would you like to begin your adventure as one of the chosen by the destiny?**
 
@@ -6,7 +6,7 @@ The Chosen Ones reshapes the opening moments of your journey by granting access 
 
 The true strength of this mod lies not in raw power, but in freedom. By unlocking legendary options early, players can experiment with unconventional builds, explore new synergies, and fully realize character concepts that might otherwise take an entire run to assemble.
 
-Whether you are testing ideas, refining strategies, or simply embracing a power-fantasy start, The Chosen Ones empowers you to play the way you imagine — from the very beginning. 
+Whether you are testing ideas, refining strategies, or simply embracing a power-fantasy start, The Chosen Ones empowers you to play the way you imagine ï¿½ from the very beginning. 
 
 This **Across the Obelisk** mod is designed for experimentation and players who want to begin their journey already feeling legendary.
 
@@ -18,6 +18,8 @@ This **Across the Obelisk** mod is designed for experimentation and players who 
 * Provides a curated list of **Epic and Mythic equipment**
 * Fully compatible with **r2modman** and **Thunderstore**
 * Lightweight and safe to add or remove
+
+![A preview of the mod in action](./Assets/loot-preview.png)
 
 ---
 

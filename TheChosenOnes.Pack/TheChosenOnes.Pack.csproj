@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pipes\ApplyGithubPathToReadmePipe.cs" />
+    <Compile Include="Pipes\PublishChangeLogPipe.cs" />
     <Compile Include="Pipes\CopyDllPipe.cs" />
     <Compile Include="Pipes\PublishedResourcesValidationPipe.cs" />
     <Compile Include="Pipes\PublishManifestPipe.cs" />

@@ -17,6 +17,8 @@ namespace TheChosenOnes.Pack
             pipes.Add(new PublishManifestPipe());
             pipes.Add(new VersionReadmePipe());
             pipes.Add(new PublishReadmePipe());
+            pipes.Add(new ApplyGithubPathToReadmePipe());
+            pipes.Add(new PublishChangeLogPipe());
             pipes.Add(new CopyDllPipe());
             pipes.Add(new PublishedResourcesValidationPipe());
             pipes.Add(new ZipPublishedResourcesPipe());

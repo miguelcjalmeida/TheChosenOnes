@@ -9,8 +9,8 @@ namespace TheChosenOnes
         public const string WebsiteUrl = "https://github.com/miguelcjalmeida/TheChosenOnes";
         public const string Description = "Have your heroes starting the game with an unique equipment to show how legendary they are.";
         public const string Author = "Scotilen";
-        public const string SemanticVersion = "1.0.9";
-        public const int LastUpdateDate = 20251217;
+        public const string SemanticVersion = "1.0.10";
+        public const int LastUpdateDate = 20251219;
         public static IList<string> Dependencies = DetermineDependencies();
 
         private static IList<string> DetermineDependencies()
