@@ -1,3 +1,6 @@
+# v1.0.11
+- Add banner to documentation
+
 # v1.0.10
 - Add CHANGELOG to this mod
 - Fix more issues related to multiplayer

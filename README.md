@@ -1,7 +1,7 @@
 
 ![The chosen ones banner](./Assets/banner.png)
 
-# v1.0.10
+# v1.0.11
 
 **Would you like to begin your adventure as one of the chosen by the destiny?**
 
