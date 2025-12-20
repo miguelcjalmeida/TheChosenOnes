@@ -1,3 +1,7 @@
+# v1.0.12
+- Reorganize the DLL's to work in any machine
+- Add the possibility to change perks in any city other than the first only and the character selection screen
+
 # v1.0.11
 - Add banner to documentation
 
