@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AcrossTheObelisk.Mod.Packer;
+using System;
 using System.IO;
-using TheChosenOnes.Pack.Pipes;
 
 namespace TheChosenOnes.Pack
 {
@@ -10,53 +9,26 @@ namespace TheChosenOnes.Pack
         public static void Main(string[] args)
         {
             var baseDir = AppContext.BaseDirectory;
-            var modsDir = Path.Combine(baseDir, "Resources");
-            var distDir = Path.Combine(baseDir, "Dist");
+            var sourceDir = Path.Combine(baseDir, "../../..");
+            var packer = new Packer();
 
-            var pipes = new List<IPipe>();
-            pipes.Add(new PublishManifestPipe());
-            pipes.Add(new VersionReadmePipe());
-            pipes.Add(new PublishReadmePipe());
-            pipes.Add(new ApplyGithubPathToReadmePipe());
-            pipes.Add(new PublishChangeLogPipe());
-            pipes.Add(new CopyDllPipe());
-            pipes.Add(new PublishedResourcesValidationPipe());
-            pipes.Add(new ZipPublishedResourcesPipe());
-
-            if (!Directory.Exists(modsDir))
-            {
-                Console.WriteLine("- Mods directory not found.");
-                return;
-            }
-
-            Directory.CreateDirectory(distDir);
-
-            try
-            {
-                ProcessResources(baseDir, modsDir, distDir, pipes);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"- FAILED DUE TO: {ex.Message}");
-            }
-        }
-
-        private static void ProcessResources(string baseDir, string publishAllResourcesPath, string distDir, List<IPipe> pipes)
-        {
-            foreach (string publishResourcesPath in Directory.GetDirectories(publishAllResourcesPath))
-            {
-                var publishResourceName = Path.GetFileName(publishResourcesPath);
-                var publishFinalZipPath = Path.Combine(distDir, $"{publishResourceName}.zip");
-                var context = new PipeContext(publishResourceName, publishFinalZipPath, baseDir, publishAllResourcesPath, distDir, publishResourcesPath);
-
-                Console.WriteLine($"Packing {publishResourceName}...");
-
-                foreach (IPipe pipe in pipes)
-                {
-                    Console.WriteLine($"- Applying {pipe.GetType().Name}");
-                    pipe.Apply(context);
-                }
-            }
+            packer.Pack(new PackerContext(
+                otherResources: $"{baseDir}/Resources",
+                distributionPath: $"{baseDir}/Dist",
+                readmePath: $"{sourceDir}/README.md",
+                changelogPath: $"{sourceDir}/CHANGELOG.md",
+                modDllPath: $"{baseDir}/TheChosenOnes.dll",
+                version: new PackVersion(
+                    modIdentifier: Versioning.ModIdentifier,
+                    modName: Versioning.ModName,
+                    websiteUrl: Versioning.WebsiteUrl,
+                    description: Versioning.Description,
+                    author: Versioning.Author,
+                    semanticVersion: Versioning.SemanticVersion,
+                    lastUpdateDate: Versioning.LastUpdateDate,
+                    dependencies: Versioning.Dependencies
+                )
+            ));
         }
     }
 }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AcrossTheObelisk.Mod.Packer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AcrosstheObelisk.Mod.Packer.1.0.1\lib\netstandard2.0\AcrossTheObelisk.Mod.Packer.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -48,20 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pipes\ApplyGithubPathToReadmePipe.cs" />
-    <Compile Include="Pipes\PublishChangeLogPipe.cs" />
-    <Compile Include="Pipes\CopyDllPipe.cs" />
-    <Compile Include="Pipes\PublishedResourcesValidationPipe.cs" />
-    <Compile Include="Pipes\PublishManifestPipe.cs" />
-    <Compile Include="Pipes\IPipe.cs" />
-    <Compile Include="Pipes\PipeContext.cs" />
     <Compile Include="Manifest.cs" />
-    <None Include="Resources\TheChosenOnes\BepInEx\config\Obeliskial_importing\TheChosenOnes\loot\thechosenshop.json">
+    <None Include="Resources\BepInEx\config\Obeliskial_importing\TheChosenOnes\loot\thechosenshop.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Compile Include="Pipes\PublishReadmePipe.cs" />
-    <Compile Include="Pipes\VersionReadmePipe.cs" />
-    <Compile Include="Pipes\ZipPublishedResourcesPipe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
@@ -77,7 +70,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\TheChosenOnes\icon.png">
+    <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

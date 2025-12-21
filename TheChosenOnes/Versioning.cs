@@ -10,7 +10,7 @@ namespace TheChosenOnes
         public const string Description = "Have your heroes starting the game with an unique equipment to show how legendary they are.";
         public const string Author = "Scotilen";
         public const string SemanticVersion = "1.0.12";
-        public const int LastUpdateDate = 20251219;
+        public const int LastUpdateDate = 20251221;
         public static IList<string> Dependencies = DetermineDependencies();
 
         private static IList<string> DetermineDependencies()
