@@ -1,7 +1,7 @@
 
 ![The chosen ones banner](./Assets/banner.png)
 
-# v1.0.13
+# v1.0.14
 
 **Would you like to begin your adventure as one of the chosen by the destiny?**
 
@@ -16,7 +16,6 @@ This **Across the Obelisk** mod is designed for experimentation and players who 
 ## Features
 
 * Opens a custom loot selection at the **very first node (Act 0)**
-* You are now able to manage your perks in any city
 * Provides a curated list of **Epic and Mythic equipment**
 * Fully compatible with **r2modman** and **Thunderstore**
 * Lightweight and safe to add or remove
@@ -75,3 +74,4 @@ Enjoy your run, and may you truly be one of **The Chosen Ones**.
 ## Credits
 - A big thanks to Ameu for helping me out with the testing of the multiplayer, and suggesting so many ideas!
 - Thanks VidereJP for playing it with us
+- A big thanks to Binbin for making it easy to load new content to the game!

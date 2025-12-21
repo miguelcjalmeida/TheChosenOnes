@@ -1,3 +1,9 @@
+# v1.0.14
+- Move the perk changing on any city to a specific mod called "PerkRespec": 
+	- [Thunderstore](https://thunderstore.io/c/across-the-obelisk/p/ScotilenTeam/PerkRespec)
+	- [Github](https://github.com/miguelcjalmeida/PerkRespec)
+- The mod PerkRespec will also allow the respec outside of town, if desired
+
 # v1.0.13
 - Reorganize the DLL's to work in any machine
 
